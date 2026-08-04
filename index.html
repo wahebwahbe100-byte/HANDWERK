@@ -1,9 +1,12 @@
 <!doctype html>
-<html lang="de">
+<html lang="de-DE">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#f5ad00" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="./index.html" />
+  <link rel="preload" as="image" href="assets/hero-fassade.png" fetchpriority="high" />
   <meta name="description" content="Handwerk Plus – Fassadenreinigung, Malerarbeiten, Dachsanierung, Dachreinigung und Steinreinigung. Sauber, zuverlässig und kompetent." />
   <title>Handwerk Plus | Fassadenreinigung & Malerarbeiten</title>
   <!-- Einheitliches Handwerk-Plus-Logo für Browser, Suche und Teilen -->
@@ -13,6 +16,7 @@
   <link rel="image_src" href="logo.png" />
 
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
   <meta property="og:site_name" content="Handwerk Plus" />
   <meta property="og:title" content="Handwerk Plus | Fassadenreinigung & Malerarbeiten" />
   <meta property="og:description" content="Handwerk Plus – Fassadenreinigung, Malerarbeiten, Dachsanierung, Dachreinigung und Steinreinigung. Sauber, zuverlässig und kompetent." />
@@ -27,22 +31,129 @@
   <meta name="twitter:image:alt" content="Handwerk Plus Logo" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Handwerk Plus",
-    "logo": "/logo.png",
-    "image": "/logo.png",
-    "telephone": "+49 1520 1972975",
-    "email": "Handwerk-plus@outlook.de",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Auf d. Acht 9",
-      "postalCode": "55624",
-      "addressLocality": "Oberkirn",
-      "addressCountry": "DE"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "HomeAndConstructionBusiness",
+        "HousePainter",
+        "RoofingContractor"
+      ],
+      "@id": "./#business",
+      "name": "Handwerk Plus",
+      "description": "Handwerk Plus – Fassadenreinigung, Malerarbeiten, Dachsanierung, Dachreinigung und Steinreinigung. Sauber, zuverlässig und kompetent.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "./#logo",
+        "url": "logo.png",
+        "contentUrl": "logo.png",
+        "caption": "Handwerk Plus Logo"
+      },
+      "image": [
+        "assets/hero-fassade.png",
+        "assets/hero-maler.png",
+        "assets/hero-dach.png",
+        "assets/hero-stein.png"
+      ],
+      "telephone": "+4915201972975",
+      "email": "Handwerk-plus@outlook.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Auf d. Acht 9",
+        "postalCode": "55624",
+        "addressLocality": "Oberkirn",
+        "addressCountry": "DE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+4915201972975",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "de"
+        ]
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Leistungen",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fassadenreinigung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Malerarbeiten"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dachsanierung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dachreinigung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Steinreinigung"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "./#website",
+      "url": "./",
+      "name": "Handwerk Plus",
+      "inLanguage": "de-DE",
+      "publisher": {
+        "@id": "./#business"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "./index.html#webpage",
+      "url": "./index.html",
+      "name": "Handwerk Plus | Fassadenreinigung & Malerarbeiten",
+      "description": "Handwerk Plus – Fassadenreinigung, Malerarbeiten, Dachsanierung, Dachreinigung und Steinreinigung. Sauber, zuverlässig und kompetent.",
+      "isPartOf": {
+        "@id": "./#website"
+      },
+      "about": {
+        "@id": "./#business"
+      },
+      "inLanguage": "de-DE",
+      "primaryImageOfPage": {
+        "@id": "./index.html#primaryimage"
+      },
+      "mainEntity": {
+        "@id": "./#business"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "./index.html#primaryimage",
+      "url": "assets/hero-fassade.png",
+      "contentUrl": "assets/hero-fassade.png",
+      "caption": "Fachkraft bei der professionellen Fassadenreinigung"
     }
-  }
+  ]
+}
   </script>
 
 
@@ -325,7 +436,7 @@
       box-shadow: 0 0 20px rgba(245,173,0,.55);
     }
 
-    .hero h1 {
+    .hero .hero-title {
       margin: 0;
       max-width: 850px;
       font-size: clamp(3.35rem, 6.8vw, 7.25rem);
@@ -334,7 +445,7 @@
       text-wrap: balance;
     }
 
-    .hero h1 .accent {
+    .hero .hero-title .accent {
       display: block;
       color: var(--yellow);
     }
@@ -971,7 +1082,7 @@
       .service-card p { font-size: .96rem; line-height: 1.65; }
       .hero { min-height: 760px; }
       .hero-inner { min-height: 760px; padding-top: 122px; padding-bottom: 126px; align-items: center; }
-      .hero h1 { font-size: clamp(3rem, 15vw, 5rem); }
+      .hero .hero-title { font-size: clamp(3rem, 15vw, 5rem); }
       .hero-copy { font-size: 1rem; line-height: 1.6; }
       .hero-meta { gap: 10px 16px; margin-top: 28px; }
       .trust-inner, .process-grid, .form-row { grid-template-columns: 1fr; }
@@ -1192,7 +1303,7 @@
     @media (max-width: 1100px) {
       .reveal-grid,
       .contact-grid { gap: 46px; }
-      .hero h1 { font-size: clamp(3.2rem, 8vw, 6.1rem); }
+      .hero .hero-title { font-size: clamp(3.2rem, 8vw, 6.1rem); }
     }
 
     @media (max-width: 980px) {
@@ -1281,7 +1392,7 @@
       .hero-content { padding-left: 0; }
       .hero-kicker { margin-bottom: 16px; font-size: .72rem; gap: 9px; }
       .hero-kicker::before { width: 34px; }
-      .hero h1 {
+      .hero .hero-title {
         max-width: 12ch;
         font-size: clamp(2.7rem, 14.5vw, 4.35rem);
         line-height: .94;
@@ -1339,7 +1450,7 @@
       .hero-nav { display: none; }
       .hero-dots { margin-inline: auto; padding-bottom: 24px; }
       .hero-controls { justify-content: center; }
-      .hero h1 { font-size: clamp(2.55rem, 15vw, 3.75rem); }
+      .hero .hero-title { font-size: clamp(2.55rem, 15vw, 3.75rem); }
       .service-card { padding-inline: 20px; }
     }
 
@@ -1347,7 +1458,7 @@
       .hero,
       .hero-inner { min-height: 680px; }
       .hero-inner { padding-top: 104px; padding-bottom: 112px; }
-      .hero h1 { font-size: clamp(2.9rem, 8vw, 4.8rem); }
+      .hero .hero-title { font-size: clamp(2.9rem, 8vw, 4.8rem); }
       .hero-copy { margin-top: 16px; }
       .hero-actions { margin-top: 20px; }
     }
@@ -1672,7 +1783,7 @@
         font-size: .78rem;
       }
 
-      .hero h1 {
+      .hero .hero-title {
         display: block;
         max-width: 850px;
         font-size: clamp(2.55rem, 12.4vw, 4.15rem);
@@ -1680,7 +1791,7 @@
         letter-spacing: -.055em;
       }
 
-      .hero h1 .accent { display: block; }
+      .hero .hero-title .accent { display: block; }
 
       .hero-copy {
         display: block;
@@ -1704,7 +1815,7 @@
         padding-bottom: 126px;
       }
 
-      .hero h1 {
+      .hero .hero-title {
         max-width: none;
         font-size: clamp(2.35rem, 11.8vw, 3.55rem);
       }
@@ -1763,7 +1874,7 @@
           <div class="container hero-inner">
             <div class="hero-content">
               <span class="hero-kicker">Fassadenreinigung</span>
-              <h1>Saubere Fassade.<span class="accent">Neuer Glanz.</span></h1>
+              <h1 class="hero-title">Saubere Fassade.<span class="accent">Neuer Glanz.</span></h1>
               <p class="hero-copy">Professionelle Fassadenreinigung gegen Schmutz, Algen und Ablagerungen – materialschonend, gründlich und passend zu Ihrem Gebäude.</p>
               <div class="hero-actions">
                 <a class="btn btn-primary" href="#kontakt">Projekt anfragen <span>→</span></a>
@@ -1780,7 +1891,7 @@
           <div class="container hero-inner">
             <div class="hero-content">
               <span class="hero-kicker">Malerarbeiten innen & außen</span>
-              <h1>Frische Farbe.<span class="accent">Sauberes Ergebnis.</span></h1>
+              <h2 class="hero-title">Frische Farbe.<span class="accent">Sauberes Ergebnis.</span></h2>
               <p class="hero-copy">Von der Vorbereitung bis zum letzten Anstrich: präzise Malerarbeiten für Innenräume, Fassaden und Außenflächen.</p>
               <div class="hero-actions">
                 <a class="btn btn-primary" href="#kontakt">Malerangebot anfragen <span>→</span></a>
@@ -1797,7 +1908,7 @@
           <div class="container hero-inner">
             <div class="hero-content">
               <span class="hero-kicker">Dachsanierung & Dachpflege</span>
-              <h1>Sicheres Dach.<span class="accent">Langanhaltender Schutz.</span></h1>
+              <h2 class="hero-title">Sicheres Dach.<span class="accent">Langanhaltender Schutz.</span></h2>
               <p class="hero-copy">Fachgerechte Dachsanierung, Reparatur und Pflege für ein dauerhaft geschütztes, sicheres und gepflegtes Zuhause.</p>
               <div class="hero-actions">
                 <a class="btn btn-primary" href="#kontakt">Dachprojekt anfragen <span>→</span></a>
@@ -1812,7 +1923,7 @@
           <div class="container hero-inner">
             <div class="hero-content">
               <span class="hero-kicker">Stein- & Hochdruckreinigung</span>
-              <h1>Saubere Flächen.<span class="accent">Starker Eindruck.</span></h1>
+              <h2 class="hero-title">Saubere Flächen.<span class="accent">Starker Eindruck.</span></h2>
               <p class="hero-copy">Gründliche Reinigung von Einfahrten, Wegen, Terrassen und Steinflächen – für gepflegte Außenbereiche und sichtbar frische Oberflächen.</p>
               <div class="hero-actions">
                 <a class="btn btn-primary" href="#kontakt">Steinreinigung anfragen <span>→</span></a>

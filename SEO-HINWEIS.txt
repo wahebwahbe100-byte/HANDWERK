@@ -1,0 +1,21 @@
+SEO-Dateien für Handwerk Plus
+
+Die sichtbaren Website-Texte wurden nicht verändert.
+
+Enthalten:
+- index.html
+- impressum.html
+- datenschutz.html
+- robots.txt
+- sitemap-template.xml
+
+Vor Veröffentlichung:
+1. Ersetzen Sie in sitemap-template.xml "https://IHRE-DOMAIN.DE" durch die echte Domain.
+2. Benennen Sie die Datei danach in sitemap.xml um.
+3. Ergänzen Sie in robots.txt als letzte Zeile:
+   Sitemap: https://IHRE-DOMAIN.DE/sitemap.xml
+4. Laden Sie die Sitemap in der Google Search Console hoch.
+
+Die Canonical-Verweise in den HTML-Dateien sind absichtlich relativ,
+damit sie nach dem Hochladen automatisch zur tatsächlichen Domain aufgelöst werden.
+Google unterstützt relative Canonicals; nach Festlegung der Domain ist ein absoluter HTTPS-Link empfehlenswert.

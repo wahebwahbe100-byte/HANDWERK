@@ -1,0 +1,26 @@
+[
+  {
+    "file": "index.html",
+    "h1_count": 1,
+    "canonical": "./index.html",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "jsonld_nodes": 4,
+    "visible_text_unchanged": true
+  },
+  {
+    "file": "impressum.html",
+    "h1_count": 1,
+    "canonical": "./impressum.html",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "jsonld_nodes": 4,
+    "visible_text_unchanged": true
+  },
+  {
+    "file": "datenschutz.html",
+    "h1_count": 1,
+    "canonical": "./datenschutz.html",
+    "robots": "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+    "jsonld_nodes": 4,
+    "visible_text_unchanged": true
+  }
+]

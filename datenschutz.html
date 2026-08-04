@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 
-<html lang="de">
+<html lang="de-DE">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <meta content="#f5ad00" name="theme-color"/>
-<meta content="index,follow" name="robots"/>
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="./datenschutz.html" />
 <meta content="Datenschutzerklärung von Handwerk Plus, verantwortlich: Gilbert Bügler, Oberkirn." name="description"/>
 <title>Datenschutzerklärung | Handwerk Plus</title>
 <!-- Einheitliches Handwerk-Plus-Logo für Browser, Suche und Teilen -->
@@ -15,6 +16,7 @@
 <link rel="image_src" href="logo.png" />
 
 <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
 <meta property="og:site_name" content="Handwerk Plus" />
 <meta property="og:title" content="Datenschutzerklärung | Handwerk Plus" />
 <meta property="og:description" content="Datenschutzerklärung von Handwerk Plus, verantwortlich: Gilbert Bügler, Oberkirn." />
@@ -31,21 +33,136 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Handwerk Plus",
-  "logo": "/logo.png",
-  "image": "/logo.png",
-  "telephone": "+49 1520 1972975",
-  "email": "Handwerk-plus@outlook.de",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Auf d. Acht 9",
-    "postalCode": "55624",
-    "addressLocality": "Oberkirn",
-    "addressCountry": "DE"
-  }
+  "@graph": [
+    {
+      "@type": [
+        "HomeAndConstructionBusiness",
+        "HousePainter",
+        "RoofingContractor"
+      ],
+      "@id": "./#business",
+      "name": "Handwerk Plus",
+      "description": "Handwerk Plus – Fassadenreinigung, Malerarbeiten, Dachsanierung, Dachreinigung und Steinreinigung. Sauber, zuverlässig und kompetent.",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "./#logo",
+        "url": "logo.png",
+        "contentUrl": "logo.png",
+        "caption": "Handwerk Plus Logo"
+      },
+      "image": [
+        "assets/hero-fassade.png",
+        "assets/hero-maler.png",
+        "assets/hero-dach.png",
+        "assets/hero-stein.png"
+      ],
+      "telephone": "+4915201972975",
+      "email": "Handwerk-plus@outlook.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Auf d. Acht 9",
+        "postalCode": "55624",
+        "addressLocality": "Oberkirn",
+        "addressCountry": "DE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+4915201972975",
+        "contactType": "customer service",
+        "availableLanguage": [
+          "de"
+        ]
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Leistungen",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fassadenreinigung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Malerarbeiten"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dachsanierung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Dachreinigung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Steinreinigung"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "./#website",
+      "url": "./",
+      "name": "Handwerk Plus",
+      "inLanguage": "de-DE",
+      "publisher": {
+        "@id": "./#business"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "./datenschutz.html#webpage",
+      "url": "./datenschutz.html",
+      "name": "Datenschutzerklärung | Handwerk Plus",
+      "description": "Datenschutzerklärung von Handwerk Plus, verantwortlich: Gilbert Bügler, Oberkirn.",
+      "isPartOf": {
+        "@id": "./#website"
+      },
+      "about": {
+        "@id": "./#business"
+      },
+      "inLanguage": "de-DE",
+      "breadcrumb": {
+        "@id": "./datenschutz.html#breadcrumb"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "./datenschutz.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Handwerk Plus",
+          "item": "./index.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Datenschutz",
+          "item": "./datenschutz.html"
+        }
+      ]
+    }
+  ]
 }
-</script>
+  </script>
 
 <style>
     :root {
