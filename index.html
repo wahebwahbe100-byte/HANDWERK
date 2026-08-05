@@ -111,6 +111,27 @@
               "@type": "Service",
               "name": "Steinreinigung"
             }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Entrümpelung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Haushaltsauflösung"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Transport & Tragen"
+            }
           }
         ]
       }
@@ -374,6 +395,12 @@
     .slide-stone .hero-media {
       background-image: url('assets/hero-stein.png');
       background-position: center 52%;
+    }
+
+    .slide-clearout .hero-media {
+      /* Add assets/hero-entruempelung.png for a dedicated photo; the second image is a safe fallback. */
+      background-image: url('assets/hero-entruempelung.png'), url('assets/hero-stein.png');
+      background-position: center 48%, center 52%;
     }
 
     .hero-slide::before {
@@ -721,15 +748,29 @@
       background: transparent;
       box-shadow: 0 9px 22px rgba(13,15,18,.10);
     }
-    .service-thumb img {
+    .service-thumb img,
+    .service-thumb svg {
       width: 100%;
       height: 100%;
-      padding: 2px;
-      object-fit: contain;
       display: block;
       transition: transform .35s ease;
     }
-    .service-card:hover .service-thumb img { transform: scale(1.07) rotate(-2deg); }
+    .service-thumb img {
+      padding: 2px;
+      object-fit: contain;
+    }
+    .service-thumb svg {
+      padding: 14px;
+      color: var(--ink);
+      background: var(--yellow);
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .service-card:hover .service-thumb img,
+    .service-card:hover .service-thumb svg { transform: scale(1.07) rotate(-2deg); }
     .service-card h3 {
       margin: 0 0 13px;
       max-width: calc(100% - 20px);
@@ -1116,6 +1157,7 @@
       .slide-paint .hero-media { background-position: 80% center; }
       .slide-roof .hero-media { background-position: 76% center; }
       .slide-stone .hero-media { background-position: 78% center; }
+      .slide-clearout .hero-media { background-position: 70% center, 78% center; }
       .hero-slide::before { background: linear-gradient(90deg, rgba(5,7,10,.92), rgba(5,7,10,.70) 72%, rgba(5,7,10,.48)); }
       .hero .btn { width: 100%; }
       .hero-actions { gap: 10px; }
@@ -1272,6 +1314,9 @@
     .service-card.reveal-on-scroll:nth-child(4),
     .process-card.reveal-on-scroll:nth-child(4) { transition-delay: .21s; }
     .service-card.reveal-on-scroll:nth-child(5) { transition-delay: .28s; }
+    .service-card.reveal-on-scroll:nth-child(6) { transition-delay: .07s; }
+    .service-card.reveal-on-scroll:nth-child(7) { transition-delay: .14s; }
+    .service-card.reveal-on-scroll:nth-child(8) { transition-delay: .21s; }
 
     a, button, input, textarea, select { -webkit-tap-highlight-color: transparent; }
     button, .btn, a { touch-action: manipulation; }
@@ -1748,6 +1793,11 @@
         background-image: url('assets/mobile4.png');
         background-position: center;
       }
+      .slide-clearout .hero-media {
+        /* Add assets/mobile5.png for a dedicated mobile photo; mobile4 remains the fallback. */
+        background-image: url('assets/mobile5.png'), url('assets/mobile4.png');
+        background-position: center, center;
+      }
 
       /* Lighter image overlay at the top, stronger only behind the text. */
       .hero-slide::before {
@@ -1932,6 +1982,21 @@
             </div>
           </div>
         </article>
+
+        <article class="hero-slide slide-clearout" data-slide="4" aria-hidden="true">
+          <div class="hero-media" role="img" aria-label="Zuverlässige Entrümpelung und Haushaltsauflösung mit praktischer Alltagshilfe"></div>
+          <div class="container hero-inner">
+            <div class="hero-content">
+              <span class="hero-kicker">Entrümpelung & Haushaltsauflösung</span>
+              <h2 class="hero-title">Mehr Platz.<span class="accent">Weniger Belastung.</span></h2>
+              <p class="hero-copy">Zuverlässige Entrümpelungen, diskrete Haushaltsauflösungen und praktische Hilfe im Alltag – sorgfältig organisiert, besenrein ausgeführt und persönlich auf Ihre Situation abgestimmt.</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#kontakt">Kostenlos anfragen <span>→</span></a>
+                <a class="btn btn-ghost" href="https://wa.me/4915201972975?text=Hallo%20Handwerk%20Plus%2024%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Entr%C3%BCmpelung%2C%20Haushaltsaufl%C3%B6sung%20oder%20praktische%20Hilfe%20im%20Alltag." target="_blank" rel="noopener">Per WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        </article>
       </div>
 
       <div class="hero-controls" aria-label="Hero-Slider Steuerung">
@@ -1940,12 +2005,13 @@
           <button class="hero-dot" type="button" role="tab" aria-selected="false" aria-label="Malerarbeiten anzeigen" data-slide-to="1"></button>
           <button class="hero-dot" type="button" role="tab" aria-selected="false" aria-label="Dachsanierung anzeigen" data-slide-to="2"></button>
           <button class="hero-dot" type="button" role="tab" aria-selected="false" aria-label="Steinreinigung anzeigen" data-slide-to="3"></button>
+          <button class="hero-dot" type="button" role="tab" aria-selected="false" aria-label="Entrümpelung und Haushaltsauflösung anzeigen" data-slide-to="4"></button>
         </div>
         <div class="hero-nav">
           <button class="hero-arrow" id="heroPrev" type="button" aria-label="Vorheriger Slide">‹</button>
           <button class="hero-arrow" id="heroNext" type="button" aria-label="Nächster Slide">›</button>
         </div>
-        <div class="hero-count" aria-live="polite"><strong id="heroCurrent">01</strong> / 04</div>
+        <div class="hero-count" aria-live="polite"><strong id="heroCurrent">01</strong> / 05</div>
       </div>
     </section>
 
@@ -1993,6 +2059,27 @@
             <div class="service-thumb"><img src="Unsere5.png" alt="Steinreinigung" loading="lazy" decoding="async" /></div>
             <h3>Steinreinigung</h3>
             <p>Für Einfahrten, Wege, Terrassen und weitere Steinflächen rund um Ihr Objekt.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">06</span>
+            <div class="service-thumb"><img src="assets/Unsere6.png" alt="Entrümpelung" loading="lazy" decoding="async" /></div>
+            <h3>Entrümpelung</h3>
+            <p>Wohnungen, Keller, Dachböden, Garagen und Nebenräume werden sorgfältig geräumt und besenrein übergeben.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">07</span>
+            <div class="service-thumb"><img src="assets/Unsere7.png" alt="Haushaltsauflösung" loading="lazy" decoding="async" /></div>
+            <h3>Haushaltsauflösung</h3>
+            <p>Diskrete Unterstützung in sensiblen Situationen – respektvoll im Umgang mit Menschen, Erinnerungen und Eigentum.</p>
+          </article>
+
+          <article class="service-card">
+            <span class="service-number">08</span>
+            <div class="service-thumb"><img src="assets/Unsere8.png" alt="Transport und Tragen" loading="lazy" decoding="async" /></div>
+            <h3>Transport &amp; Tragen</h3>
+            <p>Hilfe beim Tragen, Sortieren, Umstellen und Transportieren kleinerer Gegenstände im privaten Umfeld.</p>
           </article>
         </div>
 
@@ -2087,7 +2174,7 @@
                   <path d="M10 12v2h4v-2"/>
                 </svg>
               </span>
-              <span><strong>Leistungsbereiche</strong><span>Dach · Fassade · Reinigung · Malerarbeiten</span></span>
+              <span><strong>Leistungsbereiche</strong><span>Dach · Fassade · Reinigung · Malerarbeiten · Entrümpelung</span></span>
             </div>
             <div class="contact-line">
               <span class="contact-line-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.6 2.6L16.5 9"/></svg></span>
@@ -2124,6 +2211,9 @@
               <option>Dachsanierung</option>
               <option>Dachreinigung</option>
               <option>Steinreinigung</option>
+              <option>Entrümpelung</option>
+              <option>Haushaltsauflösung</option>
+              <option>Transport &amp; Tragen</option>
               <option>Sonstiges</option>
             </select>
           </label>
